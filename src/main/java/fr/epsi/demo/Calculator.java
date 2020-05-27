@@ -8,6 +8,7 @@ public class Calculator {
        switch(operator){
            case "+":
                ret = a+b;
+               break;
            case "-":
                ret = a-b;
                break;
@@ -17,6 +18,8 @@ public class Calculator {
            case "/":
                ret = a/b;
                break;
+           default:
+               throw new UnknownOperatorException("Invalid operand");
        }
        return ret;
     }
